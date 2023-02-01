@@ -2,10 +2,11 @@ body {
     height: 100vh;
     background-color: rgba(34, 34, 34, 0.936);
     padding-top: 150px;
+    margin: 0;
 }
 .counter {
     height: 250px;
-    width: 250px;
+    width: 200px;
     font-size: 200px;
     color: aliceblue;
     line-height: 250px;

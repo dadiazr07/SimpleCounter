@@ -2,11 +2,9 @@ import React from "react";
 import { Counter } from "./Counter.jsx";
 
 
-
-
-
 //create your first component
-const Home = (props) => {
+const Home = (horario) => {
+console.log(horario)
 	return (
 		<>
 		<div className="contReloj conatainer fluid text-center m-0 w-100 bg-black"> 
@@ -16,12 +14,12 @@ const Home = (props) => {
 				</span>
 				<div className="container m-0">
 					<div className="row">
-						<Counter className=""/>
-						<Counter className="hourOne"/>
-						<Counter className="minTwo"/>
-						<Counter className="minOne"/>
-						<Counter className="secTwo"/>
-						<Counter className="horaReloj"/>
+						<Counter digito={horario.hora[0]}/>
+						<Counter digito={horario.hora[1]}/>
+						<Counter digito={horario.hora[2]}/>
+						<Counter digito={horario.hora[3]}/>
+						<Counter digito={horario.hora[4]}/>
+						<Counter digito={horario.hora[5]}/>
 					</div>
 				</div>
 			</div>

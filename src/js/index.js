@@ -7,7 +7,6 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
-import { Counter } from "./component/Counter.jsx";
 
 //render your react application
 
@@ -18,20 +17,19 @@ var seconds = 0
 var timer = setInterval(upTimer, 1000);
 function upTimer() {
     ++seconds;
-    let horaReloj = []
+    
     let horas = (Math.floor(seconds / 3600) < 10) ? `0${Math.floor(seconds / 3600)}` : `${Math.floor(seconds / 3600)}`;
     let minutos = (Math.floor((seconds - horas * 3600) / 60)<10) ? `0${Math.floor((seconds - horas * 3600) / 60)}` : `${Math.floor((seconds - horas * 3600) / 60)}`
     let segundos = ((seconds - (horas * 3600 + minutos * 60)) < 10) ? `0${seconds - (horas * 3600 + minutos * 60)}` : `${seconds - (horas * 3600 + minutos * 60)}`
 
-    horaReloj.push(horas)
-    horaReloj.push(minutos)
-    horaReloj.push(segundos)
+    let horaReloj = `${horas}${minutos}${segundos}`
+    
 
-    console.log(horaReloj)
+    // console.log(horaReloj)
 
     
     
     return ReactDOM.render(
-        <Home horaReloj={horaReloj}/>,document.querySelector("#app")
+        <Home hora={horaReloj}/>,document.querySelector("#app")
     );
 }
