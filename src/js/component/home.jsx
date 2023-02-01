@@ -3,28 +3,28 @@ import { Counter } from "./Counter.jsx";
 
 
 
+
+
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
 		<>
-		<div className="conatainer fluid text-center m-0 w-100"> 
-		<div className="reloj container text-center d-flex">
-			<span className="clock col">
-				Clock
-			</span>
-			<div className="container m-0">
-				<div className="row">
-							<Counter/>
-							<Counter/>
-							<Counter/>
-							<Counter/>
-							<Counter/>
-							<Counter/>
+		<div className="contReloj conatainer fluid text-center m-0 w-100 bg-black"> 
+			<div className="reloj container text-center d-flex">
+				<span className="clock col material-symbols-outlined">
+					schedule
+				</span>
+				<div className="container m-0">
+					<div className="row">
+						<Counter className=""/>
+						<Counter className="hourOne"/>
+						<Counter className="minTwo"/>
+						<Counter className="minOne"/>
+						<Counter className="secTwo"/>
+						<Counter className="horaReloj"/>
+					</div>
 				</div>
 			</div>
-		</div>
-		<h3 id= "countup">00:00:00</h3>
-		<button id="stoptimer" onclick="clearInterval(timer)">Stop Timer</button>
 		</div>
 		</>
 	);

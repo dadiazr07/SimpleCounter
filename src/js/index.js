@@ -18,9 +18,20 @@ var seconds = 0
 var timer = setInterval(upTimer, 1000);
 function upTimer() {
     ++seconds;
-    var hour = Math.floor(seconds / 3600);
-    var minute = Math.floor((seconds - hour * 3600) / 60);
-    var updSecond = seconds - (hour * 3600 + minute * 60);
+    let horaReloj = []
+    let horas = (Math.floor(seconds / 3600) < 10) ? `0${Math.floor(seconds / 3600)}` : `${Math.floor(seconds / 3600)}`;
+    let minutos = (Math.floor((seconds - horas * 3600) / 60)<10) ? `0${Math.floor((seconds - horas * 3600) / 60)}` : `${Math.floor((seconds - horas * 3600) / 60)}`
+    let segundos = ((seconds - (horas * 3600 + minutos * 60)) < 10) ? `0${seconds - (horas * 3600 + minutos * 60)}` : `${seconds - (horas * 3600 + minutos * 60)}`
+
+    horaReloj.push(horas)
+    horaReloj.push(minutos)
+    horaReloj.push(segundos)
+
+    console.log(horaReloj)
+
     
-    return ReactDOM.render(<Counter seconds={seconds}/>, document.querySelector("#app"));
+    
+    return ReactDOM.render(
+        <Home horaReloj={horaReloj}/>,document.querySelector("#app")
+    );
 }
