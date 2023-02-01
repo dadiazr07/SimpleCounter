@@ -1,15 +1,32 @@
 body {
     height: 100vh;
     background-color: rgba(34, 34, 34, 0.936);
+    text-align: center;
     padding-top: 150px;
-    margin: 0;
+}
+
+.reloj {
+    background-color: rgb(0, 0, 0);
+       display: flex;
+       justify-content:  center;
+
 }
 .counter {
-    height: 250px;
+    
     width: 200px;
+    aspect-ratio: 2/1;
     font-size: 200px;
     color: aliceblue;
     line-height: 250px;
+    background-color: rgba(34, 34, 34, 0.936);
+    border-radius: 50px;
+    margin: 10px;
+    
+}
+
+.digitos{
+    display: flex;
+    justify-content:  center;
 }
 
 .clock {
@@ -17,9 +34,6 @@ body {
     color: aliceblue;
 }
 
-.contReloj div {
-    text-align: center;
-}
 
 /* 
 

@@ -7,13 +7,13 @@ const Home = (horario) => {
 console.log(horario)
 	return (
 		<>
-		<div className="contReloj conatainer fluid text-center m-0 w-100 bg-black"> 
-			<div className="reloj container text-center d-flex">
-				<span className="clock col material-symbols-outlined">
+		
+			<div className="reloj">
+				<span className="clock material-symbols-outlined">
 					schedule
 				</span>
-				<div className="container m-0">
-					<div className="row">
+				<div className="">
+					<div className="digitos">
 						<Counter digito={horario.hora[0]}/>
 						<Counter digito={horario.hora[1]}/>
 						<Counter digito={horario.hora[2]}/>
@@ -23,7 +23,7 @@ console.log(horario)
 					</div>
 				</div>
 			</div>
-		</div>
+		
 		</>
 	);
 };
