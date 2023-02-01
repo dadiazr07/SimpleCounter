@@ -30,6 +30,6 @@ function upTimer() {
     
     
     return ReactDOM.render(
-        <Home hora={horaReloj}/>,document.querySelector("#app")
+        <Home hora={horaReloj.split("")}/>,document.querySelector("#app")
     );
 }
